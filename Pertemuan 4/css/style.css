@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+    --blue: #4756DF;
+    --white: #FFFFFF;
+    --black: #2B2B2B;
+    --error-red: #DC4141;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+input, button{
+    border: none;
+    outline: none;
+}
+
+.container{
+    padding: 0 6.25rem;
+}
+
+#main-section .container{
+    min-height: 100vh;
+    padding-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#main-section .header{
+    width: 100%;
+    text-align: center;
+}
+
+#main-section .header > h1{
+    font-size: 40px;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+#main-section .header .input-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#main-section .header .input-wrapper .input-group{
+    width: clamp(320px, 100%, 616px);
+    height: 48px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-section .header .input-wrapper .input-group > input{
+    flex-grow: 1;
+    height: 100%;
+    padding-inline: 1rem;
+    font-size: 18px;
+}
+
+#main-section .header .input-wrapper .input-group > button{
+    padding: 0.75rem;
+    background: var(--blue);
+}
