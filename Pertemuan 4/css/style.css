@@ -39,18 +39,18 @@ input, button{
     gap: 3rem;
 }
 
-#main-section .header{
+#main-section .container .header{
     width: 100%;
     text-align: center;
 }
 
-#main-section .header > h1{
+#main-section .container .header > h1{
     font-size: 40px;
     color: var(--black);
     margin-bottom: 2rem;
 }
 
-#main-section .header .input-wrapper{
+#main-section .container .header .input-wrapper{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ input, button{
     gap: 1rem;
 }
 
-#main-section .header .input-wrapper .input-group{
+#main-section .container .header .input-wrapper .input-group{
     width: clamp(320px, 100%, 616px);
     height: 48px;
     border: 1px solid var(--blue);
@@ -69,14 +69,20 @@ input, button{
     align-items: center;
 }
 
-#main-section .header .input-wrapper .input-group > input{
+#main-section .container .header .input-wrapper .input-group > input{
     flex-grow: 1;
     height: 100%;
     padding-inline: 1rem;
     font-size: 18px;
 }
 
-#main-section .header .input-wrapper .input-group > button{
+#main-section .container .header .input-wrapper .input-group > button{
     padding: 0.75rem;
     background: var(--blue);
+}
+
+#main-section .container #todo-gallery{
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    gap: 1rem;
 }
