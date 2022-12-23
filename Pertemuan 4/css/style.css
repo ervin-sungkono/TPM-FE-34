@@ -91,6 +91,7 @@ input, button{
 
 .todo-card{
     position: relative;
+    z-index: 99;
 }
 
 .todo-card .todo{
@@ -109,6 +110,12 @@ input, button{
     font-size: 20px;
     font-weight: 600;
     color: var(--black);
+    opacity: 1;
+}
+
+.todo-card .todo > .todo-title.strikethrough{
+    text-decoration: line-through;
+    opacity: 0.6;
 }
 
 .todo-card .todo > input[type="checkbox"]{
@@ -132,8 +139,13 @@ input, button{
     display: flex;
     gap: 1rem;
     z-index: -1;
+    transition: 0.5s top ease-in-out;
 }
 
-.todo-card > .button-wrapper > *{
+.todo-card > .button-wrapper.active{
+    top: -48px;
+}
+
+.todo-card > .button-wrapper *{
     cursor: pointer;
 }
